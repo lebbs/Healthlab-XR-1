@@ -84,6 +84,7 @@ namespace UnityTemplateProjects
 
         Vector3 GetInputTranslationDirection()
         {
+
             Vector3 direction = new Vector3();
             if (Input.GetKey(KeyCode.W))
             {
