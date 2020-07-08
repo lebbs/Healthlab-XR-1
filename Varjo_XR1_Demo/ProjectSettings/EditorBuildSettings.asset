@@ -11,5 +11,7 @@ EditorBuildSettings:
   m_configObjects:
     Varjo.XR.Settings: {fileID: 11400000, guid: 2e06588a9708fa54183177874c6571df,
       type: 2}
+    com.unity.xr.magicleap.magic_leap_settings: {fileID: 11400000, guid: 48df933d45d41354d805ff6e2069286d,
+      type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 2c704378d7913df4189b188ceea13dba,
       type: 2}
