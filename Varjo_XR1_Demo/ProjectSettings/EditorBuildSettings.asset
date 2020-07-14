@@ -5,9 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+  - enabled: 0
+    path: Assets/Scenes/samplescene.unity
     guid: cbfe36cfddfde964d9dfce63a355d5dd
+  - enabled: 1
+    path: Assets/Scenes/XR1_Demo.unity
+    guid: 3b65a10d25d9ff84eac81e4e6095136e
+  - enabled: 0
+    path: Assets/Samples/Varjo XR Plugin/1.0.0/HDRP Samples/EyeTracking/Scenes/EyeTracking.unity
+    guid: e76ac0e65ee3e5f498bb5693648bdaf6
   m_configObjects:
     Varjo.XR.Settings: {fileID: 11400000, guid: 2e06588a9708fa54183177874c6571df,
       type: 2}
