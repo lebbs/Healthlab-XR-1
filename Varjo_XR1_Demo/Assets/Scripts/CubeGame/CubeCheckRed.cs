@@ -8,6 +8,7 @@ public class CubeCheckRed : MonoBehaviour
     public GameObject UiObjectWrong;
     public GameObject Trigger;
 
+    int i = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,8 +19,9 @@ public class CubeCheckRed : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        StartCoroutine(ShowAndHide(UiObjectRight, 1.0f));
+        StartCoroutine(ShowAndHide(UiObjectRight, 2.0f));
 
+       
 
         if(other.tag == "RedCube")
         {

@@ -30,20 +30,6 @@ Transform:
   m_Father: {fileID: 4558946663386923355}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &7519464553700338984
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9176326252618613645}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 6571574279033625781, guid: 273ea07db1b5f8e4eb2d981e3501ba56, type: 3}
 --- !u!1 &8494604563314356339
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,8 +147,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.05
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.0174815
+  m_Center: {x: 0, y: -0.01, z: -0.01}
 --- !u!138 &7367196218076900640
 FixedJoint:
   m_ObjectHideFlags: 0
@@ -234,6 +220,20 @@ MonoBehaviour:
   mainCamera: {fileID: 0}
   teleportTargetPrefab: {fileID: 7690303145252616038, guid: 689587e6dffd4aa4e8d8cbac43fc5db1,
     type: 3}
+--- !u!64 &7519464553700338984
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9176326252618613645}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6571574279033625781, guid: 273ea07db1b5f8e4eb2d981e3501ba56, type: 3}
 --- !u!1001 &7306537604524319394
 PrefabInstance:
   m_ObjectHideFlags: 0

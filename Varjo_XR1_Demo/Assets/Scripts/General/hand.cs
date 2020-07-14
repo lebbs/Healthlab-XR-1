@@ -50,7 +50,9 @@ namespace VarjoExample
         {
             if (other.gameObject.CompareTag("Pickable") ||
                 other.gameObject.CompareTag("RedCube") ||
-                other.gameObject.CompareTag("PurpleCube"))
+                other.gameObject.CompareTag("BlueCube")||
+                other.gameObject.CompareTag("OrangeCube")||
+                other.gameObject.CompareTag("ThrowableSphere"))
             {
                 contactedInteractables.Add(other.gameObject.GetComponent<Interactable>());
             }
@@ -60,7 +62,10 @@ namespace VarjoExample
         {
             if (other.gameObject.CompareTag("Pickable") ||
                 other.gameObject.CompareTag("RedCube") ||
-                other.gameObject.CompareTag("PurpleCube"))
+                other.gameObject.CompareTag("BlueCube")||
+                other.gameObject.CompareTag("OrangeCube")||
+                other.gameObject.CompareTag("ThrowableSphere"))
+
             {
                 contactedInteractables.Remove(other.gameObject.GetComponent<Interactable>());
             }
@@ -78,7 +83,7 @@ namespace VarjoExample
                 return;
             }
 
-            // Check if alreadyu held
+            // Check if already held
             if (currentInteractable.activeHand)
             {
                 currentInteractable.activeHand.Drop();
