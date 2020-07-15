@@ -6,6 +6,7 @@ using UnityEngine.Events;
 
 public class ButtonScript : MonoBehaviour
 {
+    [System.Serializable]
     public class ButtonEvent : UnityEvent { }
 
     public float pressLength;
