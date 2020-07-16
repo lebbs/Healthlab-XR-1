@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Varjo.XR;
 #if CVR_AH
 using AdhawkApi;
 using AdhawkApi.Numerics.Filters;

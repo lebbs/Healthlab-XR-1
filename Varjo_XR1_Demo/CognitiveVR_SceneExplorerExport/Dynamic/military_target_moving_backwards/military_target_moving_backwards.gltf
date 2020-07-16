@@ -1,0 +1,183 @@
+{
+  "extensionsUsed": [
+    "KHR_lights_punctual"
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 504,
+      "type": "VEC3",
+      "max": [
+        0.02557816356420517,
+        0.0063254600390791893,
+        0.026374906301498413
+      ],
+      "min": [
+        -0.02557816356420517,
+        -0.0063254600390791893,
+        -0.075578160583972931
+      ]
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 504,
+      "type": "VEC3",
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ]
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 504,
+      "type": "VEC4",
+      "max": [
+        1.0,
+        1.0,
+        0.92579448223114014,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -0.92643052339553833,
+        -1.0
+      ]
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 504,
+      "type": "VEC2",
+      "max": [
+        0.93672508001327515,
+        0.99871450662612915
+      ],
+      "min": [
+        0.0012854766100645065,
+        0.0012854337692260742
+      ]
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5123,
+      "count": 1812,
+      "type": "SCALAR",
+      "max": [
+        503.0
+      ],
+      "min": [
+        0.0
+      ]
+    }
+  ],
+  "asset": {
+    "version": "2.0"
+  },
+  "buffers": [
+    {
+      "uri": "military_target_moving_backwards.bin",
+      "byteLength": 27816
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 6048
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 6048,
+      "byteLength": 6048
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 12096,
+      "byteLength": 8064
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 20160,
+      "byteLength": 4032
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 24192,
+      "byteLength": 3624
+    }
+  ],
+  "images": [
+    {
+      "uri": "Mark_low_DefaultMaterial_AlbedoTransparency.png",
+      "name": "Mark_low_DefaultMaterial_AlbedoTransparency"
+    }
+  ],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0
+      },
+      "doubleSided": true,
+      "name": "Military target"
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0
+        }
+      ],
+      "name": "Military target Moving backwards"
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "scale": [
+        15.0000038,
+        15.0,
+        14.9999981
+      ],
+      "name": "Military target Moving backwards"
+    }
+  ],
+  "samplers": [
+    {}
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ],
+      "name": "military_target_moving_backwards"
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0,
+      "name": "Mark_low_DefaultMaterial_AlbedoTransparency"
+    }
+  ]
+}
