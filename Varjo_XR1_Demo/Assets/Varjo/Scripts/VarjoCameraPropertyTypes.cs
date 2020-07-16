@@ -11,7 +11,6 @@ namespace Varjo
         ISOValue = 2,
         WhiteBalance = 3,
         FlickerCompensation = 4,
-        Sharpness = 5,
     }
 
     public enum VarjoCameraPropertyMode : long

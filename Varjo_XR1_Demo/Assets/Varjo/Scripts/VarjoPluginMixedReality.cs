@@ -10,8 +10,6 @@ namespace Varjo
 {
     public class VarjoPluginMR
     {
-        private const long VARJO_LOCKTYPE_CAMERA = 1;
-
         /// <summary>
         /// Distorted color stream from VST cameras.
         /// </summary>
@@ -71,10 +69,10 @@ namespace Varjo
         private static extern IntPtr varjo_GetBufferCPUData(IntPtr session, long id);
 
         [DllImport("VarjoLib", CharSet = CharSet.Auto)]
-        private static extern int varjo_Lock(IntPtr session, long lockType);
+        private static extern int varjo_MRLockCameraConfig(IntPtr session);
 
         [DllImport("VarjoLib", CharSet = CharSet.Auto)]
-        private static extern void varjo_Unlock(IntPtr session, long lockType);
+        private static extern void varjo_MRUnlockCameraConfig(IntPtr session);
 
         [DllImport("VarjoLib", CharSet = CharSet.Auto)]
         private static extern int varjo_MRGetCameraPropertyModeCount(IntPtr session, VarjoCameraPropertyType prop);
@@ -231,7 +229,7 @@ namespace Varjo
         public static bool LockCameraConfig()
         {
             if (!IsMRAvailable(true)) return false;
-            return (varjo_Lock(GetSession(), VARJO_LOCKTYPE_CAMERA) == 1);
+            return (varjo_MRLockCameraConfig(GetSession()) == 1);
         }
 
         /// <summary>
@@ -241,7 +239,7 @@ namespace Varjo
         public static void UnlockCameraConfig()
         {
             if (!IsMRAvailable(true)) return;
-            varjo_Unlock(GetSession(), VARJO_LOCKTYPE_CAMERA);
+            varjo_MRUnlockCameraConfig(GetSession());
         }
 
         /// <summary>

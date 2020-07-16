@@ -39,14 +39,6 @@ public class VarjoMixedRealityCameraSettings : MonoBehaviour {
     [NonSerialized]
     public VarjoCameraPropertyMode[] flickerCompensationModeOptions;
 
-    [Header("Sharpness")]
-    public VarjoCameraPropertyValue sharpness;
-    public VarjoCameraPropertyValue[] sharpnessOptions;
-    [NonSerialized]
-    public VarjoCameraPropertyMode sharpnessMode;
-    [NonSerialized]
-    public VarjoCameraPropertyMode[] sharpnessModeOptions;
-
     private void OnEnable()
     {
         UpdateValues();
@@ -61,7 +53,6 @@ public class VarjoMixedRealityCameraSettings : MonoBehaviour {
         ISOValue = GetPropertyValue(VarjoCameraPropertyType.ISOValue);
         whiteBalance = GetPropertyValue(VarjoCameraPropertyType.WhiteBalance);
         flickerCompensation = GetPropertyValue(VarjoCameraPropertyType.FlickerCompensation);
-        sharpness = GetPropertyValue(VarjoCameraPropertyType.Sharpness);
     }
 
     public void UpdateModes()
@@ -70,7 +61,6 @@ public class VarjoMixedRealityCameraSettings : MonoBehaviour {
         ISOValueMode = GetPropertyMode(VarjoCameraPropertyType.ISOValue);
         whiteBalanceMode = GetPropertyMode(VarjoCameraPropertyType.WhiteBalance);
         flickerCompensationMode = GetPropertyMode(VarjoCameraPropertyType.FlickerCompensation);
-        sharpnessMode = GetPropertyMode(VarjoCameraPropertyType.Sharpness);
     }
 
     public void UpdateOptions()
@@ -79,7 +69,6 @@ public class VarjoMixedRealityCameraSettings : MonoBehaviour {
         ISOValueOptions = GetPropertyValues(VarjoCameraPropertyType.ISOValue);
         whiteBalanceOptions = GetPropertyValues(VarjoCameraPropertyType.WhiteBalance);
         flickerCompensationOptions = GetPropertyValues(VarjoCameraPropertyType.FlickerCompensation);
-        sharpnessOptions = GetPropertyValues(VarjoCameraPropertyType.Sharpness);
     }
 
     public void UpdateModeOptions()
@@ -88,7 +77,6 @@ public class VarjoMixedRealityCameraSettings : MonoBehaviour {
         ISOValueModeOptions = GetPropertyModes(VarjoCameraPropertyType.ISOValue);
         whiteBalanceModeOptions = GetPropertyModes(VarjoCameraPropertyType.WhiteBalance);
         flickerCompensationModeOptions = GetPropertyModes(VarjoCameraPropertyType.FlickerCompensation);
-        sharpnessModeOptions = GetPropertyModes(VarjoCameraPropertyType.Sharpness);
     }
 
     public void SetPropertyMode(VarjoCameraPropertyType type, VarjoCameraPropertyMode mode)

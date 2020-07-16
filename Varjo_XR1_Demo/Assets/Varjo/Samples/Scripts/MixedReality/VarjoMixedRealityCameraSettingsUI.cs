@@ -17,8 +17,6 @@ public class VarjoMixedRealityCameraSettingsUI : MonoBehaviour {
     public Dropdown whiteBalanceValue;
     public Dropdown flickerCompensationMode;
     public Dropdown flickerCompensationValue;
-    public Dropdown sharpnessMode;
-    public Dropdown sharpnessValue;
 
     void Start () {
         UpdateModes();
@@ -42,10 +40,6 @@ public class VarjoMixedRealityCameraSettingsUI : MonoBehaviour {
         flickerCompensationMode.ClearOptions();
         flickerCompensationMode.AddOptions(ModeOptionStrings(settings.flickerCompensationModeOptions));
         flickerCompensationMode.value = OptionIndex(settings.flickerCompensationModeOptions, settings.flickerCompensationMode);
-
-        sharpnessMode.ClearOptions();
-        sharpnessMode.AddOptions(ModeOptionStrings(settings.sharpnessModeOptions));
-        sharpnessMode.value = OptionIndex(settings.sharpnessModeOptions, settings.sharpnessMode);
     }
 
     public void UpdateValues()
@@ -69,11 +63,6 @@ public class VarjoMixedRealityCameraSettingsUI : MonoBehaviour {
         flickerCompensationValue.AddOptions(ValueOptionStrings(settings.flickerCompensationOptions));
         flickerCompensationValue.value = OptionIndex(settings.flickerCompensationOptions, settings.flickerCompensation);
         flickerCompensationValue.interactable = settings.flickerCompensationMode.Equals(VarjoCameraPropertyMode.Manual);
-
-        sharpnessValue.ClearOptions();
-        sharpnessValue.AddOptions(ValueOptionStrings(settings.sharpnessOptions));
-        sharpnessValue.value = OptionIndex(settings.sharpnessOptions, settings.sharpness);
-        sharpnessValue.interactable = settings.sharpnessMode.Equals(VarjoCameraPropertyMode.Manual);
     }
 
     public void SetExposureTimeMode()
@@ -94,11 +83,6 @@ public class VarjoMixedRealityCameraSettingsUI : MonoBehaviour {
     public void SetFlickerCompensationMode()
     {
         SetMode(VarjoCameraPropertyType.FlickerCompensation, (VarjoCameraPropertyMode)settings.flickerCompensationModeOptions[flickerCompensationMode.value]);
-    }
-
-    public void SetSharpnessMode()
-    {
-        SetMode(VarjoCameraPropertyType.Sharpness, (VarjoCameraPropertyMode)settings.sharpnessModeOptions[sharpnessMode.value]);
     }
 
     public void SetMode(VarjoCameraPropertyType type, VarjoCameraPropertyMode mode)
@@ -127,11 +111,6 @@ public class VarjoMixedRealityCameraSettingsUI : MonoBehaviour {
         SetValue(VarjoCameraPropertyType.FlickerCompensation, (VarjoCameraPropertyValue)settings.flickerCompensationOptions[flickerCompensationValue.value]);
     }
 
-    public void SetSharpnessValue()
-    {
-        SetValue(VarjoCameraPropertyType.Sharpness, (VarjoCameraPropertyValue)settings.sharpnessOptions[sharpnessValue.value]);
-    }
-
     public void SetValue(VarjoCameraPropertyType type, VarjoCameraPropertyValue value)
     {
         settings.SetPropertyValue(type, value);
@@ -155,11 +134,6 @@ public class VarjoMixedRealityCameraSettingsUI : MonoBehaviour {
     public void ResetFlickerCompensation()
     {
         ResetValue(VarjoCameraPropertyType.FlickerCompensation);
-    }
-
-    public void ResetSharpness()
-    {
-        ResetValue(VarjoCameraPropertyType.Sharpness);
     }
 
     public void ResetValue(VarjoCameraPropertyType type)
