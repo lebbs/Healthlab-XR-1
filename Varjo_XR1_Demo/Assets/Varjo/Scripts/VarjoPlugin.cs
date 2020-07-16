@@ -226,7 +226,6 @@ namespace Varjo
         [DllImport("VarjoUnity")] private static extern bool InitSession();
         [DllImport("VarjoUnity")] private static extern void EndSession();
         [DllImport("VarjoUnity")] private static extern bool IsSessionNull();
-        [DllImport("VarjoUnity")] public static extern void SetSessionPriority(int priority);
 
         [DllImport("VarjoUnity")] public static extern bool IsVarjoSystemInstalled();
         [DllImport("VarjoUnity")] public static extern bool IsHMDConnected();

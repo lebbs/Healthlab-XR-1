@@ -535,8 +535,8 @@ namespace CognitiveVR
             Mesh mesh = new Mesh();
             mesh.name = "temp";
 
-            var w = (int)(terrain.terrainData.heightmapWidth / downsample);
-            var h = (int)(terrain.terrainData.heightmapHeight / downsample);
+            var w = (int)(terrain.terrainData.heightmapResolution / downsample);
+            var h = (int)(terrain.terrainData.heightmapResolution / downsample);
             Vector3[] vertices = new Vector3[w * h];
             Vector2[] uv = new Vector2[w * h];
             Vector4[] tangents = new Vector4[w * h];

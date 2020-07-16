@@ -45,7 +45,7 @@ namespace Varjo
             lock (mutex)
             {
                 Debug.Assert(streamData.type == StreamType);
-                data = streamData.metadata.environmentCubemapData;
+                data = streamData.environmentCubemapData;
 
                 long bufferId = 0;
                 if (!VarjoPluginMR.GetDataStreamBufferId(streamData.id, streamData.frameNumber, 0 /* varjo_ChannelIndex_First */, out bufferId))

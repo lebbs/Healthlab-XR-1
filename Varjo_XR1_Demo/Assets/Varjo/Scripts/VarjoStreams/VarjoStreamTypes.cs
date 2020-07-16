@@ -29,47 +29,38 @@ namespace Varjo
     }
 
     [StructLayout(LayoutKind.Explicit)]
-    internal struct VarjoStreamFrameMetadata
-    {
-        [FieldOffset(0)]
-        internal VarjoDistortedColorData distortedColorData;
-        [FieldOffset(0)]
-        internal VarjoEnvironmentCubemapData environmentCubemapData;
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
     internal struct VarjoStreamFrame
     {
+        [FieldOffset(0)]
         internal VarjoStreamType type; //!< Type of the stream.
+        [FieldOffset(8)]
         internal long id;              //!< Id of the stream.
+        [FieldOffset(16)]
         internal long frameNumber;     //!< Monotonically increasing frame number.
+        [FieldOffset(24)]
         internal long channelFlags;    //!< Channels that this frame contains.
+        [FieldOffset(32)]
         internal long dataFlags;       //!< Data that this frame contains.
+        [FieldOffset(40)]
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 16)]
         internal double[] hmdPose;     //!< Pose at the time when the frame was produced.
-        internal VarjoStreamFrameMetadata metadata; //!< Frame data. Use 'type' to determine which element to access.
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    internal struct VarjoWBNormalizationData
-    {
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 3)]
-        internal double[] wbGains;                              //!< White balance gains to convert from 6500K to VST color temperature.
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 9)]
-        internal double[] invCCM;                               //!< Inverse CCM for 6500K color temperature.
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 9)]
-        internal double[] ccm;                                  //!< CCM for VST color temperature.
+        //!< Frame data. Use 'type' to determine which element to access. 
+        [FieldOffset(168)]
+        internal VarjoDistortedColorData distortedColorData;
+        [FieldOffset(168)]
+        internal VarjoEnvironmentCubemapData environmentCubemapData;
     }
 
     [StructLayout(LayoutKind.Sequential)]
     internal struct VarjoDistortedColorData
     {
-        internal long timestamp;                                //!< Timestamp at end of exposure.
-        internal double ev;                                     //!< EV (exposure value) at ISO100.
-        internal double exposureTime;                           //!< Exposure time in seconds.
-        internal double whiteBalanceTemperature;                //!< White balance temperature in Kelvin degrees.
-        internal VarjoWBNormalizationData wbNormalizationData;  //!< White balance normalization data.
-        internal double cameraCalibrationConstant;              //!< The luminance (in cd/m^2) which saturates a pixel is equal to 2^ev * cameraCalibrationConstant.
+        internal long timestamp;                 //!< Timestamp at end of exposure.
+        internal double ev;                      //!< EV (exposure value) at ISO100.
+        internal double exposureTime;            //!< Exposure time in seconds.
+        internal double whiteBalanceTemperature; //!< White balance temperature in Kelvin degrees.
+        internal double whiteBalanceColorGainR;  //!< White balance R color gain.
+        internal double whiteBalanceColorGainG;  //!< White balance G color gain.
+        internal double whiteBalanceColorGainB;  //!< White balance B color gain.
     }
 
     [StructLayout(LayoutKind.Sequential)]
