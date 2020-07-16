@@ -19,7 +19,7 @@ MonoBehaviour:
   Documentation: docs.cognitive3d.com
   GazeType: 0
   RenderPassType: 0
-  ApplicationKey: 
+  ApplicationKey: AFDL6TV36BFS2ULEY1HW5PEASJJPBSQQ
   EnableLogging: 1
   EnableDevLogging: 0
   DynamicObjectSearchInParent: 1
@@ -42,7 +42,7 @@ MonoBehaviour:
   SensorExtremeSnapshotCount: 256
   DynamicExtremeSnapshotCount: 256
   TransactionExtremeSnapshotCount: 256
-  FixationExtremeSnapshotCount: 2
+  FixationExtremeSnapshotCount: 64
   SensorSnapshotMaxTimer: 10
   DynamicSnapshotMaxTimer: 10
   TransactionSnapshotMaxTimer: 10
@@ -294,11 +294,11 @@ MonoBehaviour:
     VersionNumber: 1
     VersionId: 0
   - SceneName: XR1_Demo
-    SceneId: 
+    SceneId: d0aff3c4-04b6-4f8c-bd33-9c737dd095e5
     ScenePath: Assets/Scenes/XR1_Demo.unity
-    LastRevision: 0
+    LastRevision: 5248990081548844732
     VersionNumber: 1
-    VersionId: 0
+    VersionId: 1823
   - SceneName: ScenePrefabs
     SceneId: 
     ScenePath: Assets/Zombie/ScenePrefabs.unity
