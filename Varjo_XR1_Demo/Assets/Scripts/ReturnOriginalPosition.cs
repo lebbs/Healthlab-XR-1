@@ -31,7 +31,7 @@ public class ReturnOriginalPosition : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.collider.tag == "Target")
+        if(collision.collider.tag == "Target" || collision.collider.tag == "Floor")
         {
             rigidbody = gameObject.GetComponent<Rigidbody>();
             rigidbody.angularVelocity = new Vector3(0, 0, 0);
