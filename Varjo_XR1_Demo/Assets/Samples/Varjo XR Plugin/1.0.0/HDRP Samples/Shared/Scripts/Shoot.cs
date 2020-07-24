@@ -28,7 +28,7 @@ namespace VarjoExample
                     buttonDown = true;
                     bullet = Instantiate(projectile, projectileOrigin.transform.position, projectileOrigin.transform.rotation);
                     rb = bullet.GetComponent<Rigidbody>();
-                    rb.isKinematic = true;
+                    //rb.isKinematic = true;
                     bullet.transform.parent = projectileOrigin;
                 }
                 else // button is held down, projectile gets energy

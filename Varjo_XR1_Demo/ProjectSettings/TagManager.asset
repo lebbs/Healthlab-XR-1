@@ -14,6 +14,7 @@ TagManager:
   - Target
   - ThrowableSphere
   - FxTemporaire
+  - Paddle
   layers:
   - Default
   - TransparentFX
@@ -28,8 +29,8 @@ TagManager:
   - ButtonLayer
   - Controller
   - Table
-  - 
-  - 
+  - PingPongRacket
+  - BatFollower
   - 
   - 
   - 
